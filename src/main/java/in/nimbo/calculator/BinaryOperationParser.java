@@ -11,7 +11,7 @@ public class BinaryOperationParser {
     public final char operator;
 
     public BinaryOperationParser(String input){
-        String pattern = "\\s*(\\d+)\\s*(\\+|\\-|/|\\*)\\s*(\\d+)\\s*";
+        String pattern = "\\s*(\\-?\\d+)\\s*(\\+|\\-|/|\\*)\\s*(\\-?\\d+)\\s*";
         Pattern regex = Pattern.compile(pattern);
         Matcher matcher = regex.matcher(input);
         if(matcher.find()){
